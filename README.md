@@ -1,6 +1,6 @@
 # Getting Started
 
-First create a new account, new database in mongodb altas cloud and get the connection string, use this [video](https://www.youtube.com/watch?v=jzZwarOxNCA) as reference. Add your connection string to `app.config["MONGO_URI"]` in `app.py`
+First create a new account, new database in mongodb atlas cloud and get the connection string, use this [video](https://www.youtube.com/watch?v=jzZwarOxNCA) as reference. Add your connection string to `app.config["MONGO_URI"]` in `app.py`
 
 ## Step 1
 
