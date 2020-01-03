@@ -61,5 +61,10 @@ Execute command `heroku login` and enter credentials to login to Hiroku CLI.
 
 Execute command `heroku create your-app-name` to create a new application. (https://your-app-name.hirokuapp.com will be your URL)
 
-
+git init
+heroku git:remote -a your-app-name
+git add .
+git commit -m "initial commit"
+git push heroku master
+heroku logs --tail
 
