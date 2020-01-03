@@ -13,9 +13,9 @@ mongo = PyMongo()
 
 app = Flask(__name__)
 
-app.config["MONGO_URI"] = 'mongodb+srv://strainer_admin:strainer_admin123@strainercluster-igrpg.azure.mongodb.net/test?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'connection string goes here'
 #Example_____________
-#app.config["MONGO_URI"] = 'mongodb+srv://<user>:<password>@strainercluster-igrpg.azure.mongodb.net/test?retryWrites=true&w=majority'
+#app.config["MONGO_URI"] = 'mongodb+srv://<user>:<password>@strainercluster-igrpg.azure.mongodb.net/<collection-name>?retryWrites=true&w=majority'
 CORS(app)
 
 app.config['CORS_HEADERS'] = 'Content-Type'
