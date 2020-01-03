@@ -44,7 +44,7 @@ If everyting is configured properly, you should get a `201` responce as,
 Check database and respective collection to verify.
 ## Step 5 (Test GET Method)
 
-Now let's retrieve the record we just added. Sent a `GET` request to `http://127.0.0.1:5000/get/90030072`, if everything is configured properly you should get,
+Now let's retrieve the record we just added. Send a `GET` request to `http://127.0.0.1:5000/get/90030072`, if everything is configured properly you should get,
 ```
 [
     {

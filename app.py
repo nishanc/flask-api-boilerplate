@@ -38,8 +38,8 @@ def query():
         'field2': request.json['field2'],
         'field3': request.json['field3']
     }
-    query_collection = mongo.db.queries
-    query_collection.insert(queryToInsert)
+    query_collection = mongo.db.queries #select queries collection
+    query_collection.insert(queryToInsert) #insert
     return jsonify({'query': request.json['queryId'],'message': 'Query added successfully'}), 201
 
 @app.route('/get/<id>', methods=['GET'])
