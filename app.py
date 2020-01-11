@@ -30,17 +30,18 @@ def home():
 @app.route('/query', methods=['POST'])
 @cross_origin()
 def query():
-    if not request.json or not 'queryId' in request.json:
+    data = request.get_json(force=True)
+    if not data or not 'queryId' in data:
         abort(400)
     queryToInsert = {
-        'queryId': request.json['queryId'],
-        'field1': request.json['field1'],
-        'field2': request.json['field2'],
-        'field3': request.json['field3']
+        'queryId': data['queryId'],
+        'field1': data['field1'],
+        'field2': data['field2'],
+        'field3': data['field3']
     }
     query_collection = mongo.db.queries #select queries collection
     query_collection.insert(queryToInsert) #insert
-    return jsonify({'query': request.json['queryId'],'message': 'Query added successfully'}), 201
+    return jsonify({'query': data['queryId'],'message': 'Query added successfully'}), 201
 
 @app.route('/get/<id>', methods=['GET'])
 @cross_origin()
